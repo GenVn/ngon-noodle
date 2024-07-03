@@ -3,6 +3,9 @@ import { Manrope as FontSans } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
+import HeaderSection from "@/components/header";
+import NavigationSection from "@/components/nav";
+import { homeConfig } from "@/config/home";
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -25,7 +28,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
         className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div></div>
+          <HeaderSection></HeaderSection>
+          <NavigationSection items={homeConfig.mobileNav}></NavigationSection>
         </ThemeProvider>
       </body>
     </html>

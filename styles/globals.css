@@ -75,7 +75,12 @@
     @apply border-border;
   }
   body {
-    @apply bg-background w-full max-w-screen-2xl flex justify-center text-foreground;
+    @apply bg-background w-full max-w-screen-2xl flex justify-center;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+@layer components {
+  .nav-mobile {
+    @apply fixed bottom-4 left-8 right-8;
   }
 }
