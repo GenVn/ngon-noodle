@@ -15,16 +15,17 @@ export default function NavigationSection({ items }: NavigationSectionProps) {
   if (!items?.length) {
     return null;
   }
+
   return (
-    <nav className="w-full h-16 fixed bottom-4 px-4">
-      <div className="w-full h-full py-2 rounded-full shadow-lg flex gap-2 justify-around">
+    <nav className="w-full h-16 fixed bottom-4 px-4 z-50">
+      <div className="w-full h-full py-2 backdrop-blur-lg bg-white rounded-full shadow-rounded flex gap-2 justify-around">
         {items.map((item, index) => {
           const Icon = Icons[item.icon!];
           return (
             <Link
               href={item.href!}
               key={index}
-              className="flex flex-col justify-between items-center"
+              className="flex flex-col justify-between items-center cursor-pointer"
             >
               <Icon
                 className={cn(

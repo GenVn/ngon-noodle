@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Manrope as FontSans } from "next/font/google";
+import { Manrope as FontSans, Bangers, Dancing_Script } from "next/font/google";
 import "@/styles/globals.css";
 import { cn } from "@/lib/utils";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -11,7 +11,15 @@ const fontSans = FontSans({
   subsets: ["latin"],
   variable: "--font-sans",
 });
-
+const fontBangers = Bangers({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-bangers",
+});
+const fontDancingScript = Dancing_Script({
+  subsets: ["latin"],
+  variable: "--font-dancing-script",
+});
 interface RootLayoutProps {
   children: React.ReactNode;
 }
@@ -25,11 +33,17 @@ export default function RootLayout({ children }: RootLayoutProps) {
     <html lang="en" suppressHydrationWarning>
       <head />
       <body
-        className={cn("min-h-screen font-sans antialiased", fontSans.variable)}
+        className={cn(
+          "min-h-screen font-sans antialiased",
+          fontSans.variable,
+          fontBangers.variable,
+          fontDancingScript.variable
+        )}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <HeaderSection></HeaderSection>
           <NavigationSection items={homeConfig.mobileNav}></NavigationSection>
+          {children}
         </ThemeProvider>
       </body>
     </html>

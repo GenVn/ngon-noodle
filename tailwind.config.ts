@@ -14,6 +14,7 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
+        "xs": "320px",
         "2xl": "1400px",
       },
     },
@@ -61,6 +62,8 @@ module.exports = {
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
         heading: ["var(--font-heading)", ...fontFamily.sans],
+        bangers: ["var(--font-bangers)", ...fontFamily.sans],
+        dancing_script: ["var(--font-dancing-script)", ...fontFamily.sans],
       },
       keyframes: {
         "accordion-down": {
@@ -76,6 +79,10 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      screen: {
+        "xs": "320px",
+        "s" : "480px",
+      }
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
