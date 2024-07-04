@@ -3,6 +3,7 @@ import { MobileNavItem } from "@/types";
 import { usePathname } from "next/navigation";
 import { Icons } from "@/components/icons";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface NavigationSectionProps {
   items: MobileNavItem[];
@@ -15,26 +16,37 @@ export default function NavigationSection({ items }: NavigationSectionProps) {
     return null;
   }
   return (
-    <nav className="w-full h-12 fixed bottom-4 px-8">
-      <div className="w-full h-full rounded-full shadow-lg flex gap-2 justify-between">
+    <nav className="w-full h-16 fixed bottom-4 px-4">
+      <div className="w-full h-full py-2 rounded-full shadow-lg flex gap-2 justify-around">
         {items.map((item, index) => {
           const Icon = Icons[item.icon!];
           return (
-            <div key={index} className="flex flex-col items-center">
+            <Link
+              href={item.href!}
+              key={index}
+              className="flex flex-col justify-between items-center"
+            >
               <Icon
                 className={cn(
-                  "w-5 h-5",
-                  path == item.href ? "text-blue-500" : ""
+                  "w-6 h-6",
+                  path == item.href ? "text-blue-600 font-bold" : "text-black"
                 )}
               />
-              <span className="font-bold text-sm">{item.title}</span>
               <span
                 className={cn(
-                  "w-1/2 h-1 bg-blue-500",
+                  "font-bold text-xs",
+                  path == item.href ? "text-blue-500" : "text-black"
+                )}
+              >
+                {item.title}
+              </span>
+              <span
+                className={cn(
+                  "w-[24px] h-1 bg-blue-500 rounded-full scale-up-hor-left",
                   path == item.href ? "visible" : "invisible"
                 )}
               ></span>
-            </div>
+            </Link>
           );
         })}
       </div>
