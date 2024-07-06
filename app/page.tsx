@@ -14,7 +14,7 @@ export default function HomePage() {
       </div>
       <div className="absolute w-full h-full px-8 z-10">
         {/* Banner Title */}
-        <div className="w-full flex flex-col gap-2 pt-28">
+        <div className="w-full flex flex-col gap-2 pt-[6.5rem]">
           <p className="uppercase font-bangers text-6xl text-[#C35123] text-outline w-full">
             Ngon Noodle
           </p>

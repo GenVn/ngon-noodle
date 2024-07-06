@@ -18,7 +18,7 @@ export default function NavigationSection({ items }: NavigationSectionProps) {
 
   return (
     <nav className="w-full h-16 fixed bottom-4 px-4 z-50">
-      <div className="w-full h-full py-2 backdrop-blur-lg bg-white rounded-full shadow-rounded flex gap-2 justify-around">
+      <div className="w-full h-full py-2 rounded-full bg-slate-100 shadow-rounded flex gap-2 justify-around">
         {items.map((item, index) => {
           const Icon = Icons[item.icon!];
           return (
@@ -30,13 +30,17 @@ export default function NavigationSection({ items }: NavigationSectionProps) {
               <Icon
                 className={cn(
                   "w-6 h-6",
-                  path == item.href ? "text-blue-600 font-bold" : "text-black"
+                  path == item.href
+                    ? "text-blue-600 font-bold"
+                    : "text-gray-600"
                 )}
               />
               <span
                 className={cn(
                   "font-bold text-xs",
-                  path == item.href ? "text-blue-500" : "text-black"
+                  path == item.href
+                    ? "text-blue-500 font-bold"
+                    : "text-gray-600"
                 )}
               >
                 {item.title}
