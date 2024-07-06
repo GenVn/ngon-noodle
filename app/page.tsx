@@ -13,19 +13,20 @@ export default function HomePage() {
         </div>
       </div>
       <div className="absolute w-full h-full px-8 z-10">
+        {/* Banner Title */}
         <div className="w-full flex flex-col gap-2 pt-28">
           <p className="uppercase font-bangers text-6xl text-[#C35123] text-outline w-full">
             Ngon Noodle
           </p>
-          <p className="uppercase font-bangers text-6xl text-black text-outline w-full  ">
+          <p className="uppercase font-bangers text-5xl text-black text-outline w-full  ">
             Vietnamese Noodles
           </p>
 
-          <p className="font-dancing_script text-lg w-3/4 text-black">
+          <p className="font-dancing_script text-xl w-3/4 text-black pt-2">
             {/* eslint-disable-next-line react/no-unescaped-entities */}
             Một thương hiệu dành riêng cho những "ní" thích ăn mì.
           </p>
-          <p className="font-dancing_script text-lg w-3/4 text-black">
+          <p className="font-dancing_script text-xl w-3/4 text-black">
             Ấn xem menu để chọn món mì riêng của bạn hoặc lắc xí ngầu để ra món
             ngẫu nhiên.
           </p>

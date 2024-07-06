@@ -1,4 +1,5 @@
-const { fontFamily } = require("tailwindcss/defaultTheme");
+const { fontFamily  } = require("tailwindcss/defaultTheme")
+const defaultTheme = require("tailwindcss/defaultTheme")
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -14,9 +15,13 @@ module.exports = {
       center: true,
       padding: "2rem",
       screens: {
-        "xs": "320px",
         "2xl": "1400px",
       },
+    },
+    screens: {
+      "xs" : "320px",
+      "s" : "480px",
+      ...defaultTheme.screens,
     },
     extend: {
       colors: {
@@ -79,10 +84,6 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      screen: {
-        "xs": "320px",
-        "s" : "480px",
-      }
     },
   },
   plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography")],
