@@ -5,7 +5,7 @@ export default function FooterSection() {
   return (
     <section className="w-full relative min-h-screen flex flex-col gap-8 px-8  select-none bg-gray-900">
       <div className="w-full flex flex-col gap-4 mt-12 mb-8">
-        <span className="text-lg font-bold uppercase">
+        <span className="text-lg font-bold uppercase text-white">
           Công ty cổ phần Ngon Noodle
         </span>
         <span className="text-gray-400">MST: 999999999999</span>
@@ -16,7 +16,9 @@ export default function FooterSection() {
         </span>
       </div>
       <div className="w-full flex flex-col gap-4">
-        <span className="font-bold text-lg uppercase">Các chương trình</span>
+        <span className="font-bold text-lg uppercase text-white">
+          Các chương trình
+        </span>
         <div className="w-full flex flex-col gap-4 text-gray-400">
           <Link href={"/"}>Chương trình Thẻ Thành Viên</Link>
           <Link href={"/"}>Chương trình Giới Thiệu Nhận Quà</Link>
@@ -26,7 +28,7 @@ export default function FooterSection() {
         </div>
       </div>
       <div className="w-full flex flex-col gap-4">
-        <span className="italic">
+        <span className="italic text-white">
           Từ nay muốn ăn mì ngon thì ghé{" "}
           <span className="font-semibold text-gray-400">#ngonnoodle</span> bạn
           nhé.
